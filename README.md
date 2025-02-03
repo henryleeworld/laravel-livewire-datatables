@@ -1,4 +1,4 @@
-# Laravel 10 Livewire DataTables
+# Laravel 11 Livewire DataTables
 
 一個完整的 DataTables 是由三個東西組成的，欄位、列以及存放的值，強化 HTML 資料表表格控制，使用非常靈活且簡易。
 
@@ -34,5 +34,5 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/e6obXod.png)
+![](https://i.imgur.com/4CJ8b2K.png)
 > DataTables 方便實現較靈活的操作

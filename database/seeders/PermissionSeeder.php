@@ -2,27 +2,27 @@
 
 namespace Database\Seeders;
 
-use App\Models\Role;
+use App\Models\Permission;
 use Illuminate\Database\Seeder;
 
-class RolesTableSeeder extends Seeder
+class PermissionSeeder extends Seeder
 {
     /**
      * Run the database seeders.
      */
     public function run(): void
     {
-        $roles = [
+        $permissions = [
             [
                 'id'    => 1,
-                'title' => 'Admin',
+                'title' => 'user_access',
             ],
             [
                 'id'    => 2,
-                'title' => 'User',
+                'title' => 'task_access',
             ],
         ];
 
-        Role::insert($roles);
+        Permission::insert($permissions);
     }
 }

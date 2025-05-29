@@ -7,17 +7,25 @@ use Illuminate\Support\Facades\Gate;
 
 class UpdateTaskRequest extends FormRequest
 {
-    public function rules()
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return Gate::allows('task_access');
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
     {
         return [
             'description' => [
                 'required', 'string',
             ]
         ];
-    }
-
-    public function authorize()
-    {
-        return Gate::allows('task_access');
     }
 }
